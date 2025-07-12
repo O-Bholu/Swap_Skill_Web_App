@@ -183,7 +183,7 @@ The application uses a clean grayscale theme with:
 - **Typography**: Clean, readable fonts
 - **Layout**: Responsive grid system
 - **Components**: Consistent card and button styles
-- **No animations or gradients**: Focus on functionality
+
 
 ## Development
 
