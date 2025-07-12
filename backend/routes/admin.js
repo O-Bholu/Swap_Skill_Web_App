@@ -7,6 +7,42 @@ import { adminAuth } from '../middleware/auth.js';
 
 const router = express.Router();
 
+// Secure admin promotion (requires secret key)
+router.post('/promote/:userId', async (req, res) => {
+  try {
+    const { secretKey } = req.body;
+    const { userId } = req.params;
+
+    // Check if secret key matches (you should change this to a secure key)
+    if (secretKey !== process.env.ADMIN_SECRET_KEY) {
+      return res.status(403).json({ message: 'Invalid secret key' });
+    }
+
+    const user = await User.findById(userId);
+    if (!user) {
+      return res.status(404).json({ message: 'User not found' });
+    }
+
+    user.isAdmin = true;
+    await user.save();
+
+    // Log admin action
+    await AdminLog.create({
+      admin: user._id,
+      action: 'promote_user',
+      targetUser: user._id,
+      details: `User ${user.name} promoted to admin`
+    });
+
+    res.json({ 
+      message: 'User promoted to admin successfully',
+      user: { name: user.name, email: user.email }
+    });
+  } catch (error) {
+    res.status(500).json({ message: 'Server error', error: error.message });
+  }
+});
+
 // Get all users (admin only)
 router.get('/users', adminAuth, async (req, res) => {
   try {
