@@ -25,11 +25,11 @@ The Skill Swap Platform is a mini application designed to enable users to list t
 - Send platform-wide messages (e.g., feature updates, downtime alerts).
 - Download reports of user activity, feedback logs, and swap stats.
 
-## Team Members
-1. Aryan Pandey  
-2. Aditya Maurya  
-3. Anuj Kumar  
-4. Bholu Yadav  
+## Team Member 
+1. Aryan Pandey   aryanpandey4526@gmail.com
+2. Aditya Maurya  mauryaaditya7405@gmail.com
+3. Anuj Kumar     anujkeshri449@gmail.com
+4. Bholu Yadav    vasu02062001@gmail.com
 
 ## Oddo Hackathon
 This project was developed as part of the Oddo Hackathon.
