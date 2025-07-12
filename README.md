@@ -44,7 +44,7 @@ This project was developed as part of the Oddo Hackathon.
 ## Setup Instructions
 
 ### Prerequisites
-- Node.js (v16 or higher)
+- Node.js (v20 or higher)
 - MongoDB (local or cloud instance)
 
 ### Backend Setup
@@ -143,7 +143,6 @@ This project was developed as part of the Oddo Hackathon.
 4. **View Statistics**: Monitor platform usage and metrics
 5. **Export Data**: Download user and swap data as CSV
 
-## Database Schema
 
 ### User Model
 - Basic info (name, email, password)
